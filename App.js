@@ -1,10 +1,21 @@
-const heading=React.createElement("h1",{id:'hello'},[React.createElement('h2',{},'Namaste react'),React.createElement('h2',{},'Namaste react')])
+import React from "react";
+import ReactDOM from "react-dom/client"; // Correct import for React 18 and above
+import Header from "./src/components/Header";
+import Body from "./src/components/Body";
+import Footer from "./src/components/Footer";
 
 
 
 
 
-
-
-const root=ReactDOM.createRoot(document.getElementById('root'));
-root.render(heading)    
+const AppLayout = () => {
+  return (
+    <div className="app">
+      <Header />
+      <Body />
+      <Footer />
+    </div>
+  );
+};
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<AppLayout />);
